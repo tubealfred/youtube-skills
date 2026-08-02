@@ -1,0 +1,58 @@
+{
+  "data": {
+    "video_id": "dQw4w9WgXcQ",
+    "sort": "top",
+    "total_fetched": 3,
+    "continuation_token": "EiYSC2RRdzR3OVdnWGNRwAEByAEB4AEBogINKAA",
+    "comments": [
+      {
+        "comment_id": "UgxKREWxIgWQ0Bh0PDx4AaABAg",
+        "parent_comment_id": null,
+        "reply_level": 0,
+        "is_reply": false,
+        "content": "The evaluation section saved me a week. Any chance of a follow-up on fixtures?",
+        "published_time": "2026-05-06T09:14:00Z",
+        "published_time_text": "2 months ago",
+        "author_name": "Priya R",
+        "author_channel_id": "UCq3IcvvfMPFuDPTNjcCbeYw",
+        "author_channel_url": "https://www.youtube.com/channel/UCq3IcvvfMPFuDPTNjcCbeYw",
+        "author_is_verified": false,
+        "author_is_creator": false,
+        "like_count": 214,
+        "reply_count": 6
+      },
+      {
+        "comment_id": "UgyR3fSt4CzxGQjHmyx4AaABAg",
+        "parent_comment_id": null,
+        "reply_level": 0,
+        "is_reply": false,
+        "content": "Great walkthrough, thanks.",
+        "published_time": "2026-05-07T18:02:00Z",
+        "published_time_text": "2 months ago",
+        "author_name": "devnotes",
+        "author_channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "author_channel_url": "https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "author_is_verified": true,
+        "author_is_creator": false,
+        "like_count": 38,
+        "reply_count": 0
+      },
+      {
+        "comment_id": "UgwTBpqZjBOaJ0KzKQR4AaABAg",
+        "parent_comment_id": null,
+        "reply_level": 0,
+        "is_reply": false,
+        "content": "Which tool did you use for the transcript diffing?",
+        "published_time": "2026-05-09T11:40:00Z",
+        "published_time_text": "2 months ago",
+        "author_name": "Sam O",
+        "author_channel_id": "UCsXVk37bltHxD1rDPwtNM8Q",
+        "author_channel_url": "https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q",
+        "author_is_verified": false,
+        "author_is_creator": false,
+        "like_count": 12,
+        "reply_count": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Hashtag"
+  short_description: "Explore sampled YouTube hashtag results"
+  default_prompt: "Use $youtube-hashtag to explore this hashtag's bounded result sample and report observed patterns, gaps, and coverage."

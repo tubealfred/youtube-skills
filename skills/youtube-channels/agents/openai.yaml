@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Channels"
+  short_description: "Fetch structured YouTube channel data and tabs"
+  default_prompt: "Use $youtube-channels to fetch the requested public channel fields and return a sourced, bounded data snapshot."

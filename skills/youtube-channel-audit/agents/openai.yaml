@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Channel Audit"
+  short_description: "Turn one channel sample into strategic actions"
+  default_prompt: "Use $youtube-channel-audit to turn this channel's bounded public sample into an evidence-grounded action plan."

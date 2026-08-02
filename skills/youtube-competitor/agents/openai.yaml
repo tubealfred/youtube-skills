@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Competitor"
+  short_description: "Compare YouTube competitors with matched evidence"
+  default_prompt: "Use $youtube-competitor to compare these channels with matched samples and distinguish coverage gaps from demand evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Video"
+  short_description: "Inspect one video's public metadata and evidence"
+  default_prompt: "Use $youtube-video to inspect this video's public metadata and return only conclusions supported by the fetched fields."

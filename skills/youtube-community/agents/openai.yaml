@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Community"
+  short_description: "Summarize sampled YouTube community posts"
+  default_prompt: "Use $youtube-community to summarize this channel's sampled community posts without inventing unsupported post fields or intent."

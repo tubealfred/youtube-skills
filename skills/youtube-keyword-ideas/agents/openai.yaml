@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Keyword Ideas"
+  short_description: "Generate evidence-based YouTube keyword ideas"
+  default_prompt: "Use $youtube-keyword-ideas to expand this topic into transparent, evidence-ranked YouTube query and content ideas."

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "video_id": "dQw4w9WgXcQ",
+    "language": "en",
+    "is_generated": true,
+    "segment_count": 4,
+    "segments": [
+      {
+        "start_ms": 0,
+        "end_ms": 7200,
+        "start_time_text": "00:00",
+        "text": "Most research agents fail because nobody bounded the sample."
+      },
+      {
+        "start_ms": 7200,
+        "end_ms": 61000,
+        "start_time_text": "00:07",
+        "text": "So today we build one that states its coverage before it states its answer."
+      },
+      {
+        "start_ms": 61000,
+        "end_ms": 240000,
+        "start_time_text": "01:01",
+        "text": "The evaluation harness is the part people skip, and it is the part that matters."
+      },
+      {
+        "start_ms": 240000,
+        "end_ms": 742000,
+        "start_time_text": "04:00",
+        "text": "We will not cover deployment in this video; that is the next one."
+      }
+    ]
+  }
+}

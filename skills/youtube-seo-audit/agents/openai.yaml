@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube SEO Audit"
+  short_description: "Audit one video's YouTube discoverability"
+  default_prompt: "Use $youtube-seo-audit to audit this video's metadata, spoken alignment, search context, and evidence-ranked fixes."

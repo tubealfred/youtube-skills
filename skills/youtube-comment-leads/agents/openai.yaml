@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Comment Leads"
+  short_description: "Rank public YouTube opportunity signals safely"
+  default_prompt: "Use $youtube-comment-leads to identify evidence-backed public opportunity signals for my stated ICP without inferring private data."

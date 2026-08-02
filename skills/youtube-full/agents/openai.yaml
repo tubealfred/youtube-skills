@@ -1,0 +1,6 @@
+interface:
+  display_name: "YouTube Full"
+  short_description: "Coordinate broad cross-resource YouTube research"
+  default_prompt: "Use $youtube-full to investigate this YouTube question across the relevant resource families and return one evidence-grounded decision brief."
+policy:
+  allow_implicit_invocation: false

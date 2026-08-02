@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Playlist"
+  short_description: "Inspect playlist metadata, contents, and coverage"
+  default_prompt: "Use $youtube-playlist to inspect this playlist's metadata and requested contents with explicit pagination coverage."

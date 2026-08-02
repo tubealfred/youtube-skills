@@ -1,0 +1,40 @@
+name: Validate skills
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile validation scripts
+        run: python3 -m py_compile scripts/*.py
+      - name: Run unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate skills and references
+        run: python3 scripts/validate_skills.py
+
+  official-contract:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check the pinned contract against official OpenAPI
+        run: python3 scripts/sync_contract.py --check

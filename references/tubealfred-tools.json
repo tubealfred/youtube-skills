@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "source": {
+    "url": "https://tubealfred.com/openapi.json",
+    "pinned_on": "2026-07-15",
+    "openapi_version": "3.1.0",
+    "api_title": "TubeAlfred YouTube API",
+    "api_version": "1.0.0"
+  },
+  "tool_count": 35,
+  "tools": [
+    {
+      "mcp_tool": "youtube_channel_about",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/about",
+      "operation_id": "channel_about",
+      "summary": "Channel about",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_community",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/community",
+      "operation_id": "channel_community",
+      "summary": "Channel community posts",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_community_page",
+      "method": "POST",
+      "path": "/v1/youtube/channel/{channel_id}/community/page",
+      "operation_id": "channel_community_page",
+      "summary": "Channel community posts page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_get",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}",
+      "operation_id": "channel_details",
+      "summary": "Channel details",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_playlists",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/playlists",
+      "operation_id": "channel_playlists",
+      "summary": "Channel playlists",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_playlists_page",
+      "method": "POST",
+      "path": "/v1/youtube/channel/{channel_id}/playlists/page",
+      "operation_id": "channel_playlists_page",
+      "summary": "Channel playlists page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_shorts",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/shorts",
+      "operation_id": "channel_shorts",
+      "summary": "Channel shorts",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_shorts_page",
+      "method": "POST",
+      "path": "/v1/youtube/channel/{channel_id}/shorts/page",
+      "operation_id": "channel_shorts_page",
+      "summary": "Channel shorts page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_streams",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/streams",
+      "operation_id": "channel_streams",
+      "summary": "Channel live streams",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_streams_page",
+      "method": "POST",
+      "path": "/v1/youtube/channel/{channel_id}/streams/page",
+      "operation_id": "channel_streams_page",
+      "summary": "Channel live streams page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_videos",
+      "method": "GET",
+      "path": "/v1/youtube/channel/{channel_id}/videos",
+      "operation_id": "channel_videos",
+      "summary": "Channel videos",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channel_videos_page",
+      "method": "POST",
+      "path": "/v1/youtube/channel/{channel_id}/videos/page",
+      "operation_id": "channel_videos_page",
+      "summary": "Channel videos page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_channels_batch",
+      "method": "POST",
+      "path": "/v1/youtube/channels:batch",
+      "operation_id": "channels_batch",
+      "summary": "Batch channel details",
+      "credit_cost": "1 credit per requested ID (up to 50 IDs per call)",
+      "parameters": [
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "ids",
+          "in": "body",
+          "required": true,
+          "type": "array[string]",
+          "minItems": 1,
+          "maxItems": 50
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_comments_list",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/comments",
+      "operation_id": "video_comments",
+      "summary": "Video comments",
+      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "top",
+            "newest"
+          ]
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_comments_page",
+      "method": "POST",
+      "path": "/v1/youtube/video/{video_id}/comments/page",
+      "operation_id": "video_comments_page",
+      "summary": "Video comments page",
+      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "in": "body",
+          "required": false,
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_playlist_get",
+      "method": "GET",
+      "path": "/v1/youtube/playlist/{playlist_id}",
+      "operation_id": "playlist_contents",
+      "summary": "Playlist contents",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "playlist_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_playlist_metadata",
+      "method": "GET",
+      "path": "/v1/youtube/playlist/{playlist_id}/metadata",
+      "operation_id": "playlist_metadata",
+      "summary": "Playlist metadata",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "playlist_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_playlist_page",
+      "method": "POST",
+      "path": "/v1/youtube/playlist/{playlist_id}/page",
+      "operation_id": "playlist_page",
+      "summary": "Playlist page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "playlist_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_related_videos",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/related",
+      "operation_id": "video_related",
+      "summary": "Related videos",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_related_videos_page",
+      "method": "POST",
+      "path": "/v1/youtube/video/{video_id}/related/page",
+      "operation_id": "video_related_page",
+      "summary": "Related videos page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_replies_list",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies",
+      "operation_id": "video_comment_replies",
+      "summary": "Comment replies",
+      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "parameters": [
+        {
+          "name": "comment_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "top",
+            "newest"
+          ]
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_replies_page",
+      "method": "POST",
+      "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies/page",
+      "operation_id": "video_comment_replies_page",
+      "summary": "Comment replies page",
+      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "parameters": [
+        {
+          "name": "comment_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "in": "body",
+          "required": false,
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_search_hashtag",
+      "method": "GET",
+      "path": "/v1/youtube/search/hashtag",
+      "operation_id": "search_hashtag",
+      "summary": "Hashtag search",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "hashtag",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_search_hashtag_page",
+      "method": "POST",
+      "path": "/v1/youtube/search/hashtag/page",
+      "operation_id": "search_hashtag_page",
+      "summary": "Hashtag search page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "hashtag",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_search_page",
+      "method": "POST",
+      "path": "/v1/youtube/search/page",
+      "operation_id": "search_page",
+      "summary": "Search page",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "continuation_token",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "in": "body",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "duration",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "features",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "live",
+          "in": "body",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "shorts",
+          "in": "body",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "sort",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "upload_date",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_search_query",
+      "method": "GET",
+      "path": "/v1/youtube/search",
+      "operation_id": "search",
+      "summary": "Search",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "all",
+            "under_three_mins",
+            "three_to_twenty_mins",
+            "over_twenty_mins"
+          ]
+        },
+        {
+          "name": "features",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "live",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "shorts",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "relevance",
+            "popularity"
+          ]
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "all",
+            "video",
+            "shorts",
+            "channel",
+            "playlist",
+            "movie"
+          ]
+        },
+        {
+          "name": "upload_date",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "all",
+            "today",
+            "week",
+            "month",
+            "year"
+          ]
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_search_suggest",
+      "method": "GET",
+      "path": "/v1/youtube/search/suggestions",
+      "operation_id": "search_suggestions",
+      "summary": "Search suggestions",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "q",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "prev",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_trending",
+      "method": "GET",
+      "path": "/v1/youtube/trending",
+      "operation_id": "trending",
+      "summary": "Trending videos",
+      "credit_cost": "1 credit per call",
+      "parameters": []
+    },
+    {
+      "mcp_tool": "youtube_trending_shorts",
+      "method": "GET",
+      "path": "/v1/youtube/trending/shorts",
+      "operation_id": "trending_shorts",
+      "summary": "Trending Shorts",
+      "credit_cost": "1 credit per call",
+      "parameters": []
+    },
+    {
+      "mcp_tool": "youtube_url_resolve",
+      "method": "GET",
+      "path": "/v1/youtube/utility/resolve",
+      "operation_id": "utility_resolve",
+      "summary": "Resolve URL",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_video_enhanced",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/enhanced",
+      "operation_id": "video_enhanced",
+      "summary": "Enhanced video details",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_video_get",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}",
+      "operation_id": "video_details",
+      "summary": "Video details",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_video_transcript",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/transcript/fast",
+      "operation_id": "video_transcript_fast",
+      "summary": "Video transcript fast",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "manual",
+            "auto",
+            "any"
+          ]
+        },
+        {
+          "name": "language",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_video_transcript_full",
+      "method": "GET",
+      "path": "/v1/youtube/video/{video_id}/transcript",
+      "operation_id": "video_transcript",
+      "summary": "Video transcript",
+      "credit_cost": "1 credit per call",
+      "parameters": [
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "enum": [
+            "manual",
+            "auto",
+            "any"
+          ]
+        },
+        {
+          "name": "language",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "mcp_tool": "youtube_videos_batch",
+      "method": "POST",
+      "path": "/v1/youtube/videos:batch",
+      "operation_id": "videos_batch",
+      "summary": "Batch video details",
+      "credit_cost": "1 credit per requested ID (up to 50 IDs per call)",
+      "parameters": [
+        {
+          "name": "fields",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "ids",
+          "in": "body",
+          "required": true,
+          "type": "array[string]",
+          "minItems": 1,
+          "maxItems": 50
+        }
+      ]
+    }
+  ]
+}

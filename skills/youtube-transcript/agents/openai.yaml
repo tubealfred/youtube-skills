@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Transcript"
+  short_description: "Summarize YouTube transcripts with timed evidence"
+  default_prompt: "Use $youtube-transcript to summarize this video's transcript with timestamped evidence, uncertainty notes, and concise excerpts."

@@ -1,0 +1,20 @@
+{
+  "data": {
+    "id": "dQw4w9WgXcQ",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "title": "Building a bounded research agent",
+    "description": "Chapters and links in the pinned comment.",
+    "channel_id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+    "channel_name": "Example Channel",
+    "channel_url": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+    "published_date": "2026-05-04",
+    "duration_seconds": 742,
+    "view_count_int": 128400,
+    "like_count_int": 6420,
+    "comment_count_int": 311,
+    "keywords": ["agents", "research", "evaluation"],
+    "thumbnail_url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "is_live": false,
+    "category": null
+  }
+}

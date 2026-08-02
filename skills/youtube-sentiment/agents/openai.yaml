@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Sentiment"
+  short_description: "Analyze YouTube audience sentiment and intent"
+  default_prompt: "Use $youtube-sentiment to analyze this bounded comment sample and separate polarity, intent, themes, and limitations."

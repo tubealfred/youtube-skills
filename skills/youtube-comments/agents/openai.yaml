@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Comments"
+  short_description: "Export public YouTube comments and reply threads"
+  default_prompt: "Use $youtube-comments to export the approved public comment sample with thread structure, provenance, and cost controls."
