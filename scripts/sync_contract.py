@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Generate or check TubeAlfred's minimal tool contract from OpenAPI.
+"""Generate or check the skills projection of TubeAlfred's operation manifest.
 
-The checked-in contract intentionally contains only information that skills need:
-MCP tool names, REST operations, costs, and accepted parameters.  The full
-OpenAPI document remains authoritative and is not copied into this repository.
+The checked-in tool contract intentionally contains only information that skills
+need: public MCP names, REST operations, costs, and accepted parameters.
 """
 
 from __future__ import annotations
@@ -17,7 +16,7 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OPENAPI_URL = "https://tubealfred.com/openapi.json"
+DEFAULT_MANIFEST_URL = "https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json"
 EXPECTED_TOOL_COUNT = 34
 DEFAULT_CONTRACT = ROOT / "references" / "tubealfred-tools.json"
 DEFAULT_CATALOG = ROOT / "skills" / "youtube-full" / "references" / "tool-catalog.md"
@@ -59,78 +58,51 @@ def _parameter(
     return result
 
 
-def extract_contract(spec: dict[str, Any], pinned_on: str) -> dict[str, Any]:
-    """Extract a stable, minimal contract from a TubeAlfred OpenAPI document."""
+def extract_contract(manifest: dict[str, Any], pinned_on: str) -> dict[str, Any]:
+    """Extract the stable, public skill fields from the operation manifest."""
     tools: list[dict[str, Any]] = []
     seen_tools: set[str] = set()
 
-    for path, path_item in spec.get("paths", {}).items():
-        for method, operation in path_item.items():
-            if method.lower() not in {"get", "post", "put", "patch", "delete"}:
-                continue
-            tool = operation.get("x-mcp-tool")
-            if not tool:
-                continue
-            if tool in seen_tools:
-                raise ValueError(f"duplicate x-mcp-tool: {tool}")
-            seen_tools.add(tool)
+    for operation in manifest.get("operations", []):
+        mcp = operation.get("mcp", {})
+        if not mcp.get("public"):
+            continue
+        tool = mcp.get("name")
+        if not isinstance(tool, str) or not tool:
+            raise ValueError(f"operation {operation.get('id')} is missing an MCP name")
+        if tool in seen_tools:
+            raise ValueError(f"duplicate MCP tool: {tool}")
+        seen_tools.add(tool)
 
-            parameters: list[dict[str, Any]] = []
-            for item in [*path_item.get("parameters", []), *operation.get("parameters", [])]:
-                if "$ref" in item:
-                    raise ValueError(f"unresolved parameter reference in {method.upper()} {path}")
-                parameters.append(
-                    _parameter(
-                        str(item["name"]),
-                        str(item["in"]),
-                        bool(item.get("required", False)),
-                        item.get("schema", {}),
-                    )
-                )
-
-            request_body = operation.get("requestBody", {})
-            body_schema = (
-                request_body.get("content", {})
-                .get("application/json", {})
-                .get("schema", {})
+        parameters = [
+            _parameter(
+                str(parameter["name"]),
+                str(parameter["in"]),
+                bool(parameter.get("required", False)),
+                parameter.get("schema", {}),
             )
-            if "$ref" in body_schema or "allOf" in body_schema:
-                raise ValueError(
-                    f"unresolved request-body schema in {method.upper()} {path}"
-                )
-            body_required = set(body_schema.get("required", []))
-            for name, schema in body_schema.get("properties", {}).items():
-                parameters.append(_parameter(name, "body", name in body_required, schema))
-
-            tools.append(
-                {
-                    "mcp_tool": tool,
-                    "method": method.upper(),
-                    "path": path,
-                    "operation_id": operation.get("operationId"),
-                    "summary": operation.get("summary"),
-                    "credit_cost": operation.get("x-credit-cost"),
-                    "parameters": sorted(
-                        parameters,
-                        key=lambda value: (
-                            {"path": 0, "query": 1, "body": 2}.get(value["in"], 9),
-                            not value["required"],
-                            value["name"],
-                        ),
-                    ),
-                }
-            )
+            for parameter in operation.get("parameters", [])
+        ]
+        tools.append({
+            "mcp_tool": tool,
+            "method": operation["method"],
+            "path": operation["path"].rstrip("/") or "/",
+            "operation_id": operation["id"],
+            "summary": operation.get("summary"),
+            "credit_cost": operation.get("credit_cost"),
+            "parameters": parameters,
+        })
 
     tools.sort(key=lambda value: value["mcp_tool"])
-    info = spec.get("info", {})
+    api = manifest.get("api", {})
     return {
         "schema_version": 1,
         "source": {
-            "url": DEFAULT_OPENAPI_URL,
+            "url": DEFAULT_MANIFEST_URL,
             "pinned_on": pinned_on,
-            "openapi_version": spec.get("openapi"),
-            "api_title": info.get("title"),
-            "api_version": info.get("version"),
+            "manifest_version": manifest.get("manifest_version"),
+            "api_title": api.get("title"),
+            "api_version": api.get("version"),
         },
         "tool_count": len(tools),
         "tools": tools,
@@ -155,9 +127,9 @@ def render_catalog(contract: dict[str, Any]) -> str:
         "# TubeAlfred tool catalog",
         "",
         (
-            f"Generated from [TubeAlfred OpenAPI]({source['url']}) and pinned on "
+            f"Generated from the [TubeAlfred operation manifest]({source['url']}) and pinned on "
             f"{source['pinned_on']}. Do not edit this file by hand. Run "
-            "`python3 scripts/sync_contract.py --openapi <file-or-url>` from the repository root."
+            "`python3 scripts/sync_contract.py --manifest <file-or-url>` from the repository root."
         ),
         "",
         f"The contract contains **{contract['tool_count']} read-only tools**. Each listed call is credit-metered.",
@@ -205,7 +177,7 @@ def _read_pinned_on(contract_path: Path, fallback: str) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--openapi", default=DEFAULT_OPENAPI_URL, help="OpenAPI JSON file or URL")
+    parser.add_argument("--manifest", default=DEFAULT_MANIFEST_URL, help="Operation manifest JSON file or URL")
     parser.add_argument("--contract", type=Path, default=DEFAULT_CONTRACT)
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     parser.add_argument("--pinned-on", default="2026-07-15", help="YYYY-MM-DD source pin date")
@@ -214,7 +186,7 @@ def main() -> int:
 
     try:
         pinned_on = _read_pinned_on(args.contract, args.pinned_on) if args.check else args.pinned_on
-        contract = extract_contract(_load_json(args.openapi), pinned_on)
+        contract = extract_contract(_load_json(args.manifest), pinned_on)
         if contract["tool_count"] != EXPECTED_TOOL_COUNT:
             raise ValueError(
                 f"expected {EXPECTED_TOOL_COUNT} TubeAlfred tools, "
@@ -229,7 +201,7 @@ def main() -> int:
             if drift:
                 print("contract drift detected: " + ", ".join(drift), file=sys.stderr)
                 return 1
-            print(f"OK: {contract['tool_count']} tools match {args.openapi}")
+            print(f"OK: {contract['tool_count']} tools match {args.manifest}")
             return 0
 
         for path, value in outputs:

@@ -21,48 +21,39 @@ class ContractSyncTests(unittest.TestCase):
         self.assertEqual(34, len(set(operations)))
 
     def test_extracts_path_query_and_json_body_parameters(self) -> None:
-        spec = {
-            "openapi": "3.1.0",
-            "info": {"title": "Fixture", "version": "1"},
-            "paths": {
-                "/v1/youtube/things/{thing_id}": {
-                    "post": {
-                        "operationId": "things_page",
-                        "summary": "Fixture page",
-                        "x-mcp-tool": "youtube_things_page",
-                        "x-credit-cost": "1 credit per call",
-                        "parameters": [
-                            {
-                                "name": "thing_id",
-                                "in": "path",
-                                "required": True,
-                                "schema": {"type": "string"},
-                            },
-                            {
-                                "name": "sort",
-                                "in": "query",
-                                "schema": {"type": "string", "enum": ["new", "top"]},
-                            },
-                        ],
-                        "requestBody": {
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object",
-                                        "required": ["continuation_token"],
-                                        "properties": {
-                                            "continuation_token": {"type": "string"},
-                                            "count": {"type": "integer"},
-                                        },
-                                    }
-                                }
-                            }
-                        },
-                    }
-                }
-            },
+        manifest = {
+            "manifest_version": "1.0.0",
+            "api": {"title": "Fixture", "version": "1"},
+            "operations": [{
+                "id": "things_page",
+                "method": "POST",
+                "path": "/v1/youtube/things/{thing_id}",
+                "summary": "Fixture page",
+                "credit_cost": "1 credit per call",
+                "mcp": {"name": "youtube_things_page", "public": True},
+                "parameters": [
+                    {
+                        "name": "thing_id",
+                        "in": "path",
+                        "required": True,
+                        "schema": {"type": "string"},
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "required": False,
+                        "schema": {"type": "string", "enum": ["new", "top"]},
+                    },
+                    {
+                        "name": "continuation_token",
+                        "in": "body",
+                        "required": True,
+                        "schema": {"type": "string"},
+                    },
+                ],
+            }],
         }
-        contract = extract_contract(spec, "2026-07-15")
+        contract = extract_contract(manifest, "2026-07-15")
         self.assertEqual(1, contract["tool_count"])
         parameters = contract["tools"][0]["parameters"]
         self.assertIn(
@@ -90,20 +81,20 @@ class ContractSyncTests(unittest.TestCase):
         )
 
     def test_skips_rest_operations_without_an_mcp_mapping(self) -> None:
-        spec = {
-            "openapi": "3.1.0",
-            "info": {"title": "Fixture", "version": "1"},
-            "paths": {
-                "/v1/youtube/legacy": {
-                    "get": {
-                        "operationId": "legacy",
-                        "summary": "REST-only legacy alias",
-                    }
-                }
-            },
+        manifest = {
+            "manifest_version": "1.0.0",
+            "api": {"title": "Fixture", "version": "1"},
+            "operations": [{
+                "id": "legacy",
+                "method": "GET",
+                "path": "/v1/youtube/legacy",
+                "summary": "REST-only legacy alias",
+                "mcp": {"name": "youtube_legacy", "public": False},
+                "parameters": [],
+            }],
         }
 
-        contract = extract_contract(spec, "2026-08-17")
+        contract = extract_contract(manifest, "2026-08-17")
 
         self.assertEqual(0, contract["tool_count"])
         self.assertEqual([], contract["tools"])
