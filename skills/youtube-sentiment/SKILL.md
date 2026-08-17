@@ -1,7 +1,7 @@
 ---
 name: youtube-sentiment
 description: "Analyze sentiment, intent, recurring themes, objections, praise, questions, and requests in a defined sample of YouTube comments or replies. Use when the user wants qualitative voice-of-customer findings rather than a raw comment export or lead list. Do not use for transcript sentiment, comment scraping only, or identifying sales prospects."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🎭","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","sentiment","audience","voice-of-customer"],"category":"research"}}

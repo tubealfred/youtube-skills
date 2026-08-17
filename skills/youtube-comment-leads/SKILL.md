@@ -1,7 +1,7 @@
 ---
 name: youtube-comment-leads
 description: "Find publicly stated buying intent, urgent pain, product-fit questions, alternative requests, and switching signals in a defined sample of YouTube comments. Use when the user has an ethical ICP and wants evidence-ranked opportunity signals or helpful reply angles. Do not infer private contact data, sensitive traits, or readiness to buy, and do not use for bulk unsolicited outreach or general sentiment analysis."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🎯","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","leads","intent","comments"],"category":"research"}}

@@ -1,7 +1,7 @@
 ---
 name: youtube-full
 description: "Coordinate broad TubeAlfred research that explicitly combines at least three YouTube resource families, such as videos, transcripts, channels, comments, playlists, search, or trends. Use for comprehensive cross-resource investigations or when the user explicitly invokes youtube-full. Do not use for a single transcript, video, comment export, channel lookup, SEO audit, or other focused task covered by a narrower skill."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🎬","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","research","transcripts","channels","comments"],"category":"research"}}
@@ -21,7 +21,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 ## Load the contract only when needed
 
-Read [references/tool-catalog.md](references/tool-catalog.md) before selecting exact tools or constructing REST calls. It is the pinned 35-tool contract with methods, paths, parameters, and costs. Do not invent tools or parameters that are absent from it.
+Read [references/tool-catalog.md](references/tool-catalog.md) before selecting exact tools or constructing REST calls. It is the pinned 34-tool contract with methods, paths, parameters, and costs. Do not invent tools or parameters that are absent from it.
 
 ## Workflow
 
@@ -33,7 +33,7 @@ Read [references/tool-catalog.md](references/tool-catalog.md) before selecting e
 
 ## Spend controls
 
-Most calls cost 1 credit. Batch calls cost 1 credit per requested ID. Every comment or reply call costs at least 20 credits because of the 100-comment minimum.
+Most calls cost 1 credit. Unavailable transcripts and empty comment results are free. Batch calls cost 1 credit per successfully resolved ID. Every non-empty comment or reply call costs at least 20 credits because of the 100-comment minimum.
 
 - Immediately before **each** comments/replies first-page or page call, state that call's minimum cost and ask for explicit confirmation. A previous page approval does not approve another page.
 - Default to one page per list. Fetch another page only when it changes the requested decision and the user approved the added cost.

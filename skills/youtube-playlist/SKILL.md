@@ -1,7 +1,7 @@
 ---
 name: youtube-playlist
 description: "Fetch a YouTube playlist's metadata and ordered video membership, including first-page previews, bounded pagination, exhaustive exports, duration totals, and duplicate checks. Use when the user supplies or asks about one playlist, course, series, or collection. Do not use to list a channel's playlists, summarize spoken video content, analyze comments, or infer channel strategy."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🎞️","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","playlist","series","course"],"category":"media"}}

@@ -1,7 +1,7 @@
 ---
 name: youtube-shorts
 description: "Analyze a channel's YouTube Shorts inventory, spoken opening hooks, recurring topics, packaging, and relationship to long-form videos. Use when the user wants Shorts strategy or a Shorts-versus-long-form comparison. Do not claim visual hooks without frames, spoken hooks without selected transcripts, or causal performance lift from raw view counts."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"⚡","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","shorts","short-form","hooks"],"category":"research"}}

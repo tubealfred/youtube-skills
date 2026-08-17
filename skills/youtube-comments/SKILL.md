@@ -1,7 +1,7 @@
 ---
 name: youtube-comments
 description: "Fetch and export public YouTube comments or selected reply threads with IDs, authorship flags, engagement fields, timestamps, and pagination provenance. Use for a structured comment dataset, exact comment/reply records, creator-reply checks, or filtering an export. Do not use for sentiment analysis, lead scoring, audience personas, private-contact discovery, or broad video/channel metadata."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"💬","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","comments","replies","export"],"category":"research"}}
@@ -21,7 +21,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 ## Mandatory spend gate
 
-Every comment or reply call bills 1 credit per 5 requested comments with a 100-comment minimum: **at least 20 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
+Empty comment and reply results are free. Every non-empty call bills 1 credit per 5 returned comments with a 100-comment minimum: **at least 20 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
 
 Immediately before **every** first-page, next-page, replies, or replies-page call:
 

@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OPENAPI_URL = "https://tubealfred.com/openapi.json"
-EXPECTED_TOOL_COUNT = 35
+EXPECTED_TOOL_COUNT = 34
 DEFAULT_CONTRACT = ROOT / "references" / "tubealfred-tools.json"
 DEFAULT_CATALOG = ROOT / "skills" / "youtube-full" / "references" / "tool-catalog.md"
 
@@ -70,7 +70,7 @@ def extract_contract(spec: dict[str, Any], pinned_on: str) -> dict[str, Any]:
                 continue
             tool = operation.get("x-mcp-tool")
             if not tool:
-                raise ValueError(f"{method.upper()} {path} has no x-mcp-tool")
+                continue
             if tool in seen_tools:
                 raise ValueError(f"duplicate x-mcp-tool: {tool}")
             seen_tools.add(tool)
@@ -178,7 +178,8 @@ def render_catalog(contract: dict[str, Any]) -> str:
             "",
             "## Spend and recovery rules",
             "",
-            "- Comment and reply calls have a 100-comment minimum and cost at least 20 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.",
+            "- Empty transcript and comment results are not charged. Non-empty comment and reply calls have a 100-comment minimum and cost at least 20 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.",
+            "- Batch calls charge only successfully resolved items. Preserve per-item errors and report credit-limited items from partial results instead of retrying them automatically.",
             "- A continuation page is a separate billed call. Stop at the user-approved page limit.",
             "- On `402`, do not make another paid call. Report required and available credits from the response and use only already-fetched data.",
             "- On `429`, wait until the returned reset time before retrying. Changing endpoints does not bypass a key-level rate limit.",

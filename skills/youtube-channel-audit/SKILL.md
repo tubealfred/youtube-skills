@@ -1,7 +1,7 @@
 ---
 name: youtube-channel-audit
 description: "Audit one YouTube channel's public positioning, recent long-form and Shorts mix, playlists, community activity, internal coverage gaps, and next actions. Use when the user wants strategic recommendations for one channel. Do not use for raw channel export, two-or-more-channel comparison, or market/audience-demand claims unless external search or comment evidence is explicitly collected."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"📊","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","channel","audit","strategy"],"category":"analysis"}}
