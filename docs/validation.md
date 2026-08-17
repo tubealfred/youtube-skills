@@ -4,7 +4,7 @@
 
 - strict `name` and `description` frontmatter;
 - skill name, directory match, body size, and uniqueness;
-- MCP tool names and REST operations against the 35-tool pinned contract;
+- MCP tool names and REST operations against the 34-tool pinned contract;
 - one-line MCP-to-REST mappings when both appear together;
 - local Markdown links;
 - required `agents/openai.yaml` interface metadata and local icon paths;

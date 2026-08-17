@@ -2,12 +2,12 @@
   "schema_version": 1,
   "source": {
     "url": "https://tubealfred.com/openapi.json",
-    "pinned_on": "2026-07-15",
+    "pinned_on": "2026-08-17",
     "openapi_version": "3.1.0",
     "api_title": "TubeAlfred YouTube API",
     "api_version": "1.0.0"
   },
-  "tool_count": 35,
+  "tool_count": 34,
   "tools": [
     {
       "mcp_tool": "youtube_channel_about",
@@ -279,7 +279,7 @@
       "path": "/v1/youtube/channels:batch",
       "operation_id": "channels_batch",
       "summary": "Batch channel details",
-      "credit_cost": "1 credit per requested ID (up to 50 IDs per call)",
+      "credit_cost": "1 credit per successfully resolved ID (up to 50 IDs per call)",
       "parameters": [
         {
           "name": "fields",
@@ -303,7 +303,7 @@
       "path": "/v1/youtube/video/{video_id}/comments",
       "operation_id": "video_comments",
       "summary": "Video comments",
-      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
           "name": "video_id",
@@ -335,7 +335,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/page",
       "operation_id": "video_comments_page",
       "summary": "Video comments page",
-      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
           "name": "video_id",
@@ -467,7 +467,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies",
       "operation_id": "video_comment_replies",
       "summary": "Comment replies",
-      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
           "name": "comment_id",
@@ -505,7 +505,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies/page",
       "operation_id": "video_comment_replies_page",
       "summary": "Comment replies page",
-      "credit_cost": "1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
           "name": "comment_id",
@@ -848,40 +848,7 @@
       "path": "/v1/youtube/video/{video_id}/transcript/fast",
       "operation_id": "video_transcript_fast",
       "summary": "Video transcript fast",
-      "credit_cost": "1 credit per call",
-      "parameters": [
-        {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
-          "name": "kind",
-          "in": "query",
-          "required": false,
-          "type": "string",
-          "enum": [
-            "manual",
-            "auto",
-            "any"
-          ]
-        },
-        {
-          "name": "language",
-          "in": "query",
-          "required": false,
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "mcp_tool": "youtube_video_transcript_full",
-      "method": "GET",
-      "path": "/v1/youtube/video/{video_id}/transcript",
-      "operation_id": "video_transcript",
-      "summary": "Video transcript",
-      "credit_cost": "1 credit per call",
+      "credit_cost": "0 credits when captions are unavailable; otherwise 1 credit per call",
       "parameters": [
         {
           "name": "video_id",
@@ -914,7 +881,7 @@
       "path": "/v1/youtube/videos:batch",
       "operation_id": "videos_batch",
       "summary": "Batch video details",
-      "credit_cost": "1 credit per requested ID (up to 50 IDs per call)",
+      "credit_cost": "1 credit per successfully resolved ID (up to 50 IDs per call)",
       "parameters": [
         {
           "name": "fields",

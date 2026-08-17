@@ -44,7 +44,7 @@ INTERFACE_KEYS = {
     "brand_color",
 }
 AGENT_TOP_LEVEL_KEYS = {"interface", "dependencies", "policy"}
-EXPECTED_TOOL_COUNT = 35
+EXPECTED_TOOL_COUNT = 34
 
 # Text every skill must carry verbatim.  These blocks are duplicated on purpose:
 # a host loads one SKILL.md in isolation, so a shared file would not travel with

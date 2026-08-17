@@ -9,16 +9,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ContractSyncTests(unittest.TestCase):
-    def test_checked_in_contract_has_35_unique_tools(self) -> None:
+    def test_checked_in_contract_has_34_unique_tools(self) -> None:
         contract = json.loads(
             (ROOT / "references" / "tubealfred-tools.json").read_text(encoding="utf-8")
         )
         names = [item["mcp_tool"] for item in contract["tools"]]
         operations = [(item["method"], item["path"]) for item in contract["tools"]]
-        self.assertEqual(35, contract["tool_count"])
-        self.assertEqual(35, len(names))
-        self.assertEqual(35, len(set(names)))
-        self.assertEqual(35, len(set(operations)))
+        self.assertEqual(34, contract["tool_count"])
+        self.assertEqual(34, len(names))
+        self.assertEqual(34, len(set(names)))
+        self.assertEqual(34, len(set(operations)))
 
     def test_extracts_path_query_and_json_body_parameters(self) -> None:
         spec = {
@@ -89,12 +89,31 @@ class ContractSyncTests(unittest.TestCase):
             parameters,
         )
 
+    def test_skips_rest_operations_without_an_mcp_mapping(self) -> None:
+        spec = {
+            "openapi": "3.1.0",
+            "info": {"title": "Fixture", "version": "1"},
+            "paths": {
+                "/v1/youtube/legacy": {
+                    "get": {
+                        "operationId": "legacy",
+                        "summary": "REST-only legacy alias",
+                    }
+                }
+            },
+        }
+
+        contract = extract_contract(spec, "2026-08-17")
+
+        self.assertEqual(0, contract["tool_count"])
+        self.assertEqual([], contract["tools"])
+
     def test_catalog_is_generated_and_warns_about_spend(self) -> None:
         contract = json.loads(
             (ROOT / "references" / "tubealfred-tools.json").read_text(encoding="utf-8")
         )
         catalog = render_catalog(contract)
-        self.assertIn("**35 read-only tools**", catalog)
+        self.assertIn("**34 read-only tools**", catalog)
         self.assertIn("explicit user approval", catalog)
         self.assertIn("Treat video metadata", catalog)
         self.assertEqual(

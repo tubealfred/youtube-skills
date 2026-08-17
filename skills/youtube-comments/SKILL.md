@@ -21,7 +21,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 ## Mandatory spend gate
 
-Every comment or reply call bills 1 credit per 5 requested comments with a 100-comment minimum: **at least 20 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
+Empty comment and reply results are free. Every non-empty call bills 1 credit per 5 returned comments with a 100-comment minimum: **at least 20 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
 
 Immediately before **every** first-page, next-page, replies, or replies-page call:
 

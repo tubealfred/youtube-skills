@@ -4,7 +4,7 @@
 
 Fifteen focused Agent Skills turn TubeAlfred's read-only YouTube data into artifacts you can act on: timestamped summaries, clean exports, bounded research, and audits that say what they cannot prove.
 
-**Read-only · 35-tool pinned contract · every claim labeled and sourced**
+**Read-only · 34-tool pinned contract · every claim labeled and sourced**
 
 **Free tier · No credit card · 100 credits on signup**
 
@@ -135,9 +135,9 @@ Subscription credits are issued monthly and expire at the end of the billing per
 
 | Operation | Cost | 5,000 credits ≈ |
 |---|---|---|
-| Transcript, video, channel, playlist, search, or page call | 1 credit | 5,000 lookups |
-| Batch video/channel lookup | 1 credit per requested ID (max 50/call) | 5,000 IDs |
-| Comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | 25,000 comments |
+| Available transcript, video, channel, playlist, search, or page call | 1 credit | 5,000 lookups |
+| Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 5,000 resolved IDs |
+| Non-empty comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | 25,000 comments |
 
 Comment work is the only operation that can move a balance quickly — one page is at least 20 credits, and every continuation page and reply thread is another billed call. That is why the skills stop and ask before each one.
 
@@ -147,9 +147,9 @@ Comment work is the only operation that can move a balance quickly — one page 
 
 ## Credits and consent
 
-Most metadata, transcript, search, channel, and playlist calls—including their non-comment continuation pages—cost 1 credit per call. Batch calls accept up to 50 IDs and cost 1 credit per requested ID.
+Most metadata, search, channel, and playlist calls—including their non-comment continuation pages—cost 1 credit per call. Available transcripts cost 1 credit; unavailable captions are free. Batch calls accept up to 50 IDs and cost 1 credit per successfully resolved ID.
 
-Comment and reply calls cost **1 credit per 5 comments with a 100-comment minimum: at least 20 credits per call**. Each continuation page and each selected reply thread is another billed call. Immediately before every comment/reply call, a skill must state that call's minimum cost, scope, and stop condition, then obtain explicit approval; approval for one page or thread does not approve the next.
+Empty comment and reply results are free. Non-empty calls cost **1 credit per 5 comments with a 100-comment minimum: at least 20 credits per call**. Each continuation page and each selected reply thread is another billed call. Immediately before every comment/reply call, a skill must state that call's minimum cost, scope, and stop condition, then obtain explicit approval; approval for one page or thread does not approve the next.
 
 Recovery rules are deliberately conservative:
 
@@ -204,7 +204,7 @@ No. TubeAlfred is a hosted REST API and MCP server; there is no Google Cloud pro
 
 ### Why do comment requests ask for confirmation every time?
 
-Comment and reply calls bill at least 20 credits each, because of a 100-comment minimum. One approval covers one call — the next page and each reply thread are separately billed, so each is separately confirmed. This is deliberate: a silent "let me fetch a few more pages" is how a research task turns into a few hundred credits.
+Non-empty comment and reply calls bill at least 20 credits each because of a 100-comment minimum; empty results are free. One approval covers one call — the next page and each reply thread are separately billed, so each is separately confirmed. This is deliberate: a silent "let me fetch a few more pages" is how a research task turns into a few hundred credits.
 
 ### Why does the output say `[Unavailable]` instead of answering?
 

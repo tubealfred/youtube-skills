@@ -21,7 +21,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 ## Load the contract only when needed
 
-Read [references/tool-catalog.md](references/tool-catalog.md) before selecting exact tools or constructing REST calls. It is the pinned 35-tool contract with methods, paths, parameters, and costs. Do not invent tools or parameters that are absent from it.
+Read [references/tool-catalog.md](references/tool-catalog.md) before selecting exact tools or constructing REST calls. It is the pinned 34-tool contract with methods, paths, parameters, and costs. Do not invent tools or parameters that are absent from it.
 
 ## Workflow
 
@@ -33,7 +33,7 @@ Read [references/tool-catalog.md](references/tool-catalog.md) before selecting e
 
 ## Spend controls
 
-Most calls cost 1 credit. Batch calls cost 1 credit per requested ID. Every comment or reply call costs at least 20 credits because of the 100-comment minimum.
+Most calls cost 1 credit. Unavailable transcripts and empty comment results are free. Batch calls cost 1 credit per successfully resolved ID. Every non-empty comment or reply call costs at least 20 credits because of the 100-comment minimum.
 
 - Immediately before **each** comments/replies first-page or page call, state that call's minimum cost and ask for explicit confirmation. A previous page approval does not approve another page.
 - Default to one page per list. Fetch another page only when it changes the requested decision and the user approved the added cost.

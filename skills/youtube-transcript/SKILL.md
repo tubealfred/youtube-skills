@@ -23,7 +23,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 1. Obtain the 11-character `video_id`. Parse an unambiguous watch or Shorts URL locally; use URL resolution for other YouTube URL forms.
 2. Select `language` only when the user requests one. Use `kind=any` by default; choose `manual` or `auto` only when requested.
-3. Call the fast transcript endpoint first. Use the non-fast endpoint only when the user explicitly requests it or the fast endpoint is unsuitable; do not call both routinely.
+3. Call the canonical transcript tool. For REST, use the optimized `/transcript/fast` endpoint.
 4. Record the returned video ID, canonical URL, language, whether captions are auto-generated, segment count, and first-to-last timestamp coverage.
 5. Answer from the returned segments. Attach timestamps to claims and distinguish direct evidence from interpretation.
 
@@ -31,8 +31,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 | Purpose | MCP tool and inputs | REST fallback | Cost |
 | --- | --- | --- | --- |
-| Recommended transcript | `youtube_video_transcript(video_id, language?, kind?)` | `GET /v1/youtube/video/{video_id}/transcript/fast?language={code}&kind={manual|auto|any}` | 1 |
-| Non-fast transcript | `youtube_video_transcript_full(video_id, language?, kind?)` | `GET /v1/youtube/video/{video_id}/transcript?language={code}&kind={manual|auto|any}` | 1 |
+| Recommended transcript | `youtube_video_transcript(video_id, language?, kind?)` | `GET /v1/youtube/video/{video_id}/transcript/fast?language={code}&kind={manual|auto|any}` | 0 when unavailable; otherwise 1 |
 | Resolve an ambiguous URL | `youtube_url_resolve(url)` | `GET /v1/youtube/utility/resolve?url={url}` | 1 |
 
 Omit optional query parameters when unused.
