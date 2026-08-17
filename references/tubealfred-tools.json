@@ -2,8 +2,8 @@
   "schema_version": 1,
   "source": {
     "url": "https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json",
-    "pinned_on": "2026-08-17",
-    "manifest_version": "1.0.0",
+    "pinned_on": "2026-08-18",
+    "manifest_version": "1.1.0",
     "api_title": "TubeAlfred YouTube API",
     "api_version": "1.0.0"
   },
@@ -607,25 +607,50 @@
           "name": "upload_date",
           "in": "body",
           "required": false,
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "all",
+            "today",
+            "week",
+            "month",
+            "year"
+          ]
         },
         {
           "name": "duration",
           "in": "body",
           "required": false,
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "all",
+            "under_three_mins",
+            "three_to_twenty_mins",
+            "over_twenty_mins"
+          ]
         },
         {
           "name": "sort",
           "in": "body",
           "required": false,
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "relevance",
+            "popularity"
+          ]
         },
         {
           "name": "type",
           "in": "body",
           "required": false,
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "all",
+            "video",
+            "shorts",
+            "channel",
+            "playlist",
+            "movie"
+          ]
         },
         {
           "name": "features",
