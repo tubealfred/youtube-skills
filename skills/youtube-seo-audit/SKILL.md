@@ -1,7 +1,7 @@
 ---
 name: youtube-seo-audit
 description: "Audit one public YouTube video's metadata, spoken-topic alignment, search-result context, and optional audience feedback, then produce evidence-ranked improvements. Use for a single-video SEO or discoverability audit. Do not use for channel-wide strategy, raw metadata retrieval, guaranteed ranking predictions, or visual thumbnail critique unless pixels are actually inspected."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🔍","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","seo","discoverability","audit"],"category":"analysis"}}

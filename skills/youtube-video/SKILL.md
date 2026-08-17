@@ -1,7 +1,7 @@
 ---
 name: youtube-video
 description: "Fetch and explain metadata for one identified YouTube video: title, description, counts, duration, publish date, channel, keywords, category, chapters, live status, and related-video records. Use for a single-video metadata snapshot or field export. Do not use when the answer depends on spoken content, comments or sentiment, channel-wide history, playlist membership, or visual thumbnail critique."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"▶️","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","video","metadata","stats"],"category":"media"}}

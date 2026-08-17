@@ -1,7 +1,7 @@
 ---
 name: youtube-hashtag
 description: "Fetch and inspect YouTube search results for one explicit hashtag, with bounded pagination, result-type inventories, sample-level ranking, and title/description theme mapping. Use when the user asks what appears under a hashtag such as #fitness or wants its returned videos, Shorts, channels, playlists, shelves, or live results. Do not use for autocomplete keywords, general search queries, global trending claims, transcripts, comments, or SEO audits."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"#️⃣","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","hashtag","discovery","trends"],"category":"research"}}

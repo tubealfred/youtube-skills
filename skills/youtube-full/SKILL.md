@@ -1,7 +1,7 @@
 ---
 name: youtube-full
 description: "Coordinate broad TubeAlfred research that explicitly combines at least three YouTube resource families, such as videos, transcripts, channels, comments, playlists, search, or trends. Use for comprehensive cross-resource investigations or when the user explicitly invokes youtube-full. Do not use for a single transcript, video, comment export, channel lookup, SEO audit, or other focused task covered by a narrower skill."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🎬","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","research","transcripts","channels","comments"],"category":"research"}}

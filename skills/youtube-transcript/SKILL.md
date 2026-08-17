@@ -1,7 +1,7 @@
 ---
 name: youtube-transcript
 description: "Fetch and work from a YouTube video's spoken transcript, including captions, subtitles, timestamped evidence, concise summaries, key claims, and translation preparation. Use when the user's answer depends on what is said in one identified video. Do not use for metadata-only lookups, comment or sentiment analysis, channel research, playlist inventories, or hashtag discovery."
-version: "2.0.0"
+version: "2.0.1"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"📝","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","transcript","captions","subtitles","video"],"category":"media"}}
