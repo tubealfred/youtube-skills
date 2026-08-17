@@ -159,11 +159,11 @@ Recovery rules are deliberately conservative:
 
 ## Contract and validation
 
-The checked-in contract is generated from [TubeAlfred's official OpenAPI document](https://tubealfred.com/openapi.json), not maintained by hand:
+The checked-in skills projection is generated from [TubeAlfred's versioned operation manifest](https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json), not maintained by hand:
 
 ```bash
 python3 scripts/sync_contract.py \
-  --openapi https://tubealfred.com/openapi.json \
+  --manifest https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json \
   --pinned-on YYYY-MM-DD
 python3 scripts/validate_skills.py
 python3 -m unittest discover -s tests -v

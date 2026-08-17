@@ -13,7 +13,7 @@
 - that every skill carries the `CANONICAL_SECTIONS` skeleton in order, ignoring `##` lines inside fenced examples; and
 - text files for TubeAlfred credential-shaped strings.
 
-`python3 -m unittest discover -s tests -v` exercises contract extraction, known validator failure cases, and the golden-output fixtures below. `python3 scripts/sync_contract.py --check` fetches the official OpenAPI document and fails when the generated contract or catalog would differ.
+`python3 -m unittest discover -s tests -v` exercises contract extraction, known validator failure cases, and the golden-output fixtures below. `python3 scripts/sync_contract.py --check` fetches the official versioned operation manifest and fails when the generated contract or catalog would differ.
 
 ## Checking a produced artifact
 

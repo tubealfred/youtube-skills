@@ -82,11 +82,11 @@ When you change a skill's output contract, update its `.good.md` fixture in `tes
 
 ## Update TubeAlfred's contract
 
-Do not hand-edit generated files. Fetch a reviewed OpenAPI snapshot and regenerate:
+Do not hand-edit generated files. Fetch a reviewed operation-manifest snapshot and regenerate:
 
 ```bash
 python3 scripts/sync_contract.py \
-  --openapi /path/to/openapi.json \
+  --manifest /path/to/tubealfred-youtube-operations.v1.json \
   --pinned-on YYYY-MM-DD
 ```
 
@@ -106,6 +106,6 @@ python3 scripts/validate_skills.py
 python3 scripts/sync_contract.py --check
 ```
 
-The final command accesses the official OpenAPI URL. Local validation and unit tests use only the standard library and do not call TubeAlfred data endpoints or spend credits.
+The final command accesses the official operation-manifest URL. Local validation and unit tests use only the standard library and do not call TubeAlfred data endpoints or spend credits.
 
 See [docs/maintenance.md](docs/maintenance.md) for release procedure and [docs/validation.md](docs/validation.md) for validation boundaries.

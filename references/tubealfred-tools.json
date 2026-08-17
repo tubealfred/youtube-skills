@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "source": {
-    "url": "https://tubealfred.com/openapi.json",
+    "url": "https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json",
     "pinned_on": "2026-08-17",
-    "openapi_version": "3.1.0",
+    "manifest_version": "1.0.0",
     "api_title": "TubeAlfred YouTube API",
     "api_version": "1.0.0"
   },
@@ -18,15 +18,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "fields",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -40,15 +40,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -84,15 +84,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "fields",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -106,15 +106,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -150,15 +150,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -194,15 +194,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -238,15 +238,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "channel_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "channel_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -306,12 +306,6 @@
       "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "count",
           "in": "query",
           "required": false,
@@ -326,6 +320,12 @@
             "top",
             "newest"
           ]
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
         }
       ]
     },
@@ -366,15 +366,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "playlist_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "playlist_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -426,15 +426,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "continuation_token",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -470,18 +470,6 @@
       "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
-          "name": "comment_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "count",
           "in": "query",
           "required": false,
@@ -496,6 +484,18 @@
             "top",
             "newest"
           ]
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "comment_id",
+          "in": "path",
+          "required": true,
+          "type": "string"
         }
       ]
     },
@@ -508,13 +508,13 @@
       "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
       "parameters": [
         {
-          "name": "comment_id",
+          "name": "video_id",
           "in": "path",
           "required": true,
           "type": "string"
         },
         {
-          "name": "video_id",
+          "name": "comment_id",
           "in": "path",
           "required": true,
           "type": "string"
@@ -564,13 +564,13 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "continuation_token",
+          "name": "hashtag",
           "in": "body",
           "required": true,
           "type": "string"
         },
         {
-          "name": "hashtag",
+          "name": "continuation_token",
           "in": "body",
           "required": true,
           "type": "string"
@@ -586,13 +586,13 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "continuation_token",
+          "name": "query",
           "in": "body",
           "required": true,
           "type": "string"
         },
         {
-          "name": "query",
+          "name": "continuation_token",
           "in": "body",
           "required": true,
           "type": "string"
@@ -604,7 +604,25 @@
           "type": "string"
         },
         {
+          "name": "upload_date",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
           "name": "duration",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "sort",
+          "in": "body",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "type",
           "in": "body",
           "required": false,
           "type": "string"
@@ -626,24 +644,6 @@
           "in": "body",
           "required": false,
           "type": "boolean"
-        },
-        {
-          "name": "sort",
-          "in": "body",
-          "required": false,
-          "type": "string"
-        },
-        {
-          "name": "type",
-          "in": "body",
-          "required": false,
-          "type": "string"
-        },
-        {
-          "name": "upload_date",
-          "in": "body",
-          "required": false,
-          "type": "string"
         }
       ]
     },
@@ -662,16 +662,29 @@
           "type": "string"
         },
         {
+          "name": "continuation_token",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
           "name": "channel_id",
           "in": "query",
           "required": false,
           "type": "string"
         },
         {
-          "name": "continuation_token",
+          "name": "upload_date",
           "in": "query",
           "required": false,
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "all",
+            "today",
+            "week",
+            "month",
+            "year"
+          ]
         },
         {
           "name": "duration",
@@ -684,24 +697,6 @@
             "three_to_twenty_mins",
             "over_twenty_mins"
           ]
-        },
-        {
-          "name": "features",
-          "in": "query",
-          "required": false,
-          "type": "string"
-        },
-        {
-          "name": "live",
-          "in": "query",
-          "required": false,
-          "type": "boolean"
-        },
-        {
-          "name": "shorts",
-          "in": "query",
-          "required": false,
-          "type": "boolean"
         },
         {
           "name": "sort",
@@ -728,17 +723,22 @@
           ]
         },
         {
-          "name": "upload_date",
+          "name": "features",
           "in": "query",
           "required": false,
-          "type": "string",
-          "enum": [
-            "all",
-            "today",
-            "week",
-            "month",
-            "year"
-          ]
+          "type": "string"
+        },
+        {
+          "name": "live",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "shorts",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
         }
       ]
     },
@@ -807,15 +807,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "fields",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -829,15 +829,15 @@
       "credit_cost": "1 credit per call",
       "parameters": [
         {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
           "name": "fields",
           "in": "query",
           "required": false,
+          "type": "string"
+        },
+        {
+          "name": "video_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]
@@ -851,9 +851,9 @@
       "credit_cost": "0 credits when captions are unavailable; otherwise 1 credit per call",
       "parameters": [
         {
-          "name": "video_id",
-          "in": "path",
-          "required": true,
+          "name": "language",
+          "in": "query",
+          "required": false,
           "type": "string"
         },
         {
@@ -868,9 +868,9 @@
           ]
         },
         {
-          "name": "language",
-          "in": "query",
-          "required": false,
+          "name": "video_id",
+          "in": "path",
+          "required": true,
           "type": "string"
         }
       ]

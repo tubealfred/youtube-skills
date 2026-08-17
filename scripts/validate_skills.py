@@ -274,8 +274,8 @@ def _load_contract(path: Path, errors: list[str]) -> tuple[dict[str, dict[str, A
     if not isinstance(source, dict):
         errors.append(f"{path}: source must be an object")
     else:
-        if source.get("url") != "https://tubealfred.com/openapi.json":
-            errors.append(f"{path}: source.url must point to TubeAlfred's official OpenAPI")
+        if source.get("url") != "https://tubealfred.com/.well-known/tubealfred-youtube-operations.v1.json":
+            errors.append(f"{path}: source.url must point to TubeAlfred's operation manifest")
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(source.get("pinned_on", ""))):
             errors.append(f"{path}: source.pinned_on must use YYYY-MM-DD")
     tools = contract.get("tools")
