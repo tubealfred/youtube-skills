@@ -1,7 +1,7 @@
 ---
 name: youtube-keyword-ideas
 description: "Generate and evaluate YouTube query ideas using autocomplete suggestions and current search-result patterns. Use for query expansion, search-intent clustering, title concepts, or evidence-based content ideation. Do not claim keyword search volume, ranking difficulty, or demand forecasts because TubeAlfred suggestions and search results do not expose those metrics."
-version: "2.0.1"
+version: "2.0.2"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"🔑","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","keywords","seo","ideation"],"category":"research"}}

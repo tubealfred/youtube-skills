@@ -1,7 +1,7 @@
 ---
 name: youtube-channels
 description: "Fetch a YouTube channel profile and factual tab inventories for videos, live streams, Shorts, playlists, or community posts. Use for channel identity, public counts, links, recent-item listings, or structured channel exports. Do not use for strategic channel audits, competitor comparisons, audience sentiment, content-gap claims, or conclusions requiring transcripts or comments."
-version: "2.0.1"
+version: "2.0.2"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"📺","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","channel","creator","uploads"],"category":"media"}}

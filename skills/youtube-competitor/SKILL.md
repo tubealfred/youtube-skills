@@ -1,7 +1,7 @@
 ---
 name: youtube-competitor
 description: "Compare two or more YouTube channels or creators across positioning, sampled topics, formats, publishing cadence, and evidence-backed content opportunities. Use for competitor benchmarking or multi-channel market mapping. Do not use for a single-channel audit, and do not claim audience demand unless comments, search, autocomplete, or other demand evidence was actually collected."
-version: "2.0.1"
+version: "2.0.2"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"⚖️","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","competitor","benchmarking","market"],"category":"analysis"}}

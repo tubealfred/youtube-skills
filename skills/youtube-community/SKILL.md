@@ -1,7 +1,7 @@
 ---
 name: youtube-community
 description: "Fetch and summarize a YouTube channel's public Community-tab posts, including post text, returned author fields, relative publish time, like/comment counts, attachments, and bounded pagination. Use for announcements, recurring post topics, calls to action, or a structured community-post inventory. Do not use for comment text, guaranteed poll results, audience sentiment, channel-wide audits, or video performance analysis."
-version: "2.0.1"
+version: "2.0.2"
 user-invocable: true
 compatibility: "Requires a TubeAlfred MCP connection or a youtube.read REST key. No extra runtime or dependency."
 metadata: {"openclaw":{"emoji":"📣","requires":{"env":["TUBEALFRED_API_KEY"]},"primaryEnv":"TUBEALFRED_API_KEY","homepage":"https://tubealfred.com"},"hermes":{"tags":["youtube","community","posts","announcements"],"category":"research"}}
