@@ -6,7 +6,7 @@ Fifteen focused Agent Skills turn TubeAlfred's read-only YouTube data into artif
 
 **Read-only · 34-tool pinned contract · every claim labeled and sourced**
 
-**Free tier · No credit card · 100 credits on signup**
+**Free tier · No credit card · 50 credits on signup, valid for 14 days**
 
 [TubeAlfred.com](https://tubealfred.com) · [Pricing](https://tubealfred.com/pricing) · [MCP server](https://mcp.tubealfred.com/) · [Tool catalog](skills/youtube-full/references/tool-catalog.md) · [Machine-readable contract](references/tubealfred-tools.json)
 
@@ -126,18 +126,18 @@ One subscription, one credit wallet shared across MCP/API calls, transcripts, an
 
 | Plan | Price | Credits | Notes |
 |---|---|---|---|
-| **Signup** | free | 100 credits | No card required |
-| **Creator Subscription** | ~~$20~~ **$5/month** — launch pricing | 5,000 credits/month | Cancel any time |
+| **Signup** | free | 50 credits | Valid for 14 days; no card required |
+| **Creator Subscription** | ~~$20~~ **$5/month** — launch pricing | 3,500 credits/month for new subscriptions | Existing active subscriptions keep their 5,000-credit plan |
 
 Subscription credits are issued monthly and expire at the end of the billing period.
 
 **What credits buy**
 
-| Operation | Cost | 5,000 credits ≈ |
+| Operation | Cost | 3,500 credits ≈ |
 |---|---|---|
-| Available transcript, video, channel, playlist, search, or page call | 1 credit | 5,000 lookups |
-| Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 5,000 resolved IDs |
-| Non-empty comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | 25,000 comments |
+| Available transcript, video, channel, playlist, search, or page call | 1 credit | 3,500 lookups |
+| Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 3,500 resolved IDs |
+| Non-empty comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | 17,500 comments |
 
 Comment work is the only operation that can move a balance quickly — one page is at least 20 credits, and every continuation page and reply thread is another billed call. That is why the skills stop and ask before each one.
 
@@ -216,7 +216,7 @@ No. Every documented TubeAlfred operation is read-only. The skills are instructe
 
 ### What does this cost?
 
-100 credits free on signup, then $5/month for 5,000 credits during launch pricing. Most calls are 1 credit; comments are the expensive ones at 20+ per call. See [pricing](https://tubealfred.com/pricing).
+New accounts receive 50 free credits that expire after 14 days. New Creator subscriptions include 3,500 credits for $5/month during launch pricing; existing active subscriptions keep their 5,000-credit plan. Most calls are 1 credit; comments are the expensive ones at 20+ per call. See [pricing](https://tubealfred.com/pricing).
 
 ### Can I use REST instead of MCP?
 
