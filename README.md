@@ -122,22 +122,23 @@ Fetched titles, descriptions, transcripts, comments, replies, and community post
 
 ## Pricing
 
-One subscription, one credit wallet shared across MCP/API calls, transcripts, and hosted comment exports.
+Choose a monthly plan with one credit wallet shared across MCP/API calls, transcripts, and hosted comment exports.
 
 | Plan | Price | Credits | Notes |
 |---|---|---|---|
 | **Signup** | free | 50 credits | Valid for 14 days; no card required |
-| **Creator Subscription** | ~~$20~~ **$5/month** — launch pricing | 3,500 credits/month for new subscriptions | Existing active subscriptions keep their 5,000-credit plan |
+| **Creator Plus** | **$15/month** | 5,000 credits/month | Shared across MCP and API workflows |
+| **Creator Pro** | **$29/month** | 12,000 credits/month | More credits for frequent research and automation |
 
-Subscription credits are issued monthly and expire at the end of the billing period.
+Subscription credits are issued monthly and expire at the end of the billing period. Existing subscribers keep their agreed subscription price and credit allowance, including both earlier $5 cohorts. New top-up purchases use the current top-up rates for everyone. See the [canonical pricing document](https://tubealfred.com/pricing.md) for current offers.
 
 **What credits buy**
 
-| Operation | Cost | 3,500 credits ≈ |
+| Operation | Cost | 5,000 credits ≈ |
 |---|---|---|
-| Available transcript, video, channel, playlist, search, or page call | 1 credit | 3,500 lookups |
-| Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 3,500 resolved IDs |
-| Non-empty comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | 17,500 comments |
+| Available transcript, video, channel, playlist, search, or page call | 1 credit | 5,000 lookups |
+| Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 5,000 resolved IDs |
+| Non-empty comments and replies | 1 credit per 5 comments, 100-comment minimum → **≥ 20 credits per call** | Up to 25,000 comments |
 
 Comment work is the only operation that can move a balance quickly — one page is at least 20 credits, and every continuation page and reply thread is another billed call. That is why the skills stop and ask before each one.
 
@@ -216,7 +217,7 @@ No. Every documented TubeAlfred operation is read-only. The skills are instructe
 
 ### What does this cost?
 
-New accounts receive 50 free credits that expire after 14 days. New Creator subscriptions include 3,500 credits for $5/month during launch pricing; existing active subscriptions keep their 5,000-credit plan. Most calls are 1 credit; comments are the expensive ones at 20+ per call. See [pricing](https://tubealfred.com/pricing).
+New accounts receive 50 free credits that expire after 14 days. Choose Creator Plus or Creator Pro; see the [plan table](#pricing) above. Existing subscribers keep their agreed subscription price and credit allowance. Most calls use 1 credit; non-empty comment calls use at least 20 credits. The [canonical pricing document](https://tubealfred.com/pricing.md) has current offers and billing details.
 
 ### Can I use REST instead of MCP?
 
