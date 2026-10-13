@@ -10,7 +10,7 @@ Pages fetched: 2; records: 3 top-level + 0 replies
 
 - [Observed] 3 top-level records returned under `sort: top`.
 
-Each of those calls bills at least 20 credits, which I should have raised first.
+Each of those calls bills at least 5 credits, which I should have raised first.
 
 ### Limits
 

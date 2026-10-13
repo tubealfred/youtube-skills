@@ -21,11 +21,11 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 ## Mandatory spend gate
 
-Empty comment and reply results are free. Every non-empty call bills 1 credit per 5 returned comments with a 100-comment minimum: **at least 20 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
+Empty comment and reply results are free. Every non-empty call bills 1 credit per 5 returned comments with a 25-comment minimum: **at least 5 credits per call**. Default `count` to 100 and default `sort` to `top` unless the user asks for `newest`.
 
 Immediately before **every** first-page, next-page, replies, or replies-page call:
 
-1. Name the exact MCP tool/REST endpoint, `count`, `sort` where applicable, and estimated cost `max(20, ceil(count / 5))` credits.
+1. Name the exact MCP tool/REST endpoint, `count`, `sort` where applicable, and estimated cost `max(5, ceil(count / 5))` credits.
 2. Ask for explicit confirmation.
 3. Wait for the answer. A prior blanket approval does not replace this per-call confirmation.
 

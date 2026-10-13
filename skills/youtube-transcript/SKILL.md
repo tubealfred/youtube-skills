@@ -43,7 +43,7 @@ Omit optional query parameters when unused.
 - Cite transcript evidence as `[MM:SS]` or `[HH:MM:SS]`. Preserve uncertainty and flag auto-generated-caption errors.
 - Report `video_id`, canonical URL, segment sample size, language/track kind, and timestamp coverage. Transcript endpoints do not provide publish date; mark it unavailable unless fetched from another explicitly requested source.
 - Quote only the minimum needed. For third-party videos, provide summaries and brief excerpts. Provide a full transcript only after the user confirms ownership, permission, or public-domain status.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 

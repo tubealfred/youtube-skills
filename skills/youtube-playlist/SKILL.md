@@ -46,7 +46,7 @@ Omit `continuation_token` on the first request. Send page JSON with `Content-Typ
 - Playlist items expose membership, title, index, channel, thumbnail URL, and duration—not upload date or spoken content. Mark item date range **[Unavailable]** and never summarize a video's contents from its title.
 - A watch URL constructed as `https://www.youtube.com/watch?v={video_id}&list={playlist_id}` is **[Calculated]**, not an endpoint-returned field.
 - Never visually assess thumbnail URLs without image inspection.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 

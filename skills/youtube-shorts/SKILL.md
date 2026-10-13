@@ -51,7 +51,7 @@ Transcript `kind` accepts `manual`, `auto`, or `any`.
 - Shorts listings may omit publish dates. Mark cadence and date ranges **[Unavailable]** rather than estimating them from list order.
 - Compare Shorts with long-form only on fields both formats return, and never describe the difference as causal lift.
 - Rank only within the fetched sample, and report the sample size beside every ranking.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 

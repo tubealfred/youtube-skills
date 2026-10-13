@@ -55,7 +55,7 @@ Omit optional parameters when unused. Send JSON page bodies with `Content-Type: 
 - Rank items only within the fetched sample. A first page is not the channel's full history.
 - Videos may include publish dates and views; Shorts currently may lack publish dates. Mark unsupported date ranges or cadence **[Unavailable]** rather than estimating them.
 - Do not visually critique thumbnail URLs without inspecting the images. Do not claim strategy, audience demand, competitive gaps, or causal performance explanations from these inventories.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 
