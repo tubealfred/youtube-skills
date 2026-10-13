@@ -303,7 +303,7 @@
       "path": "/v1/youtube/video/{video_id}/comments",
       "operation_id": "video_comments",
       "summary": "Video comments",
-      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call)",
       "parameters": [
         {
           "name": "count",
@@ -335,7 +335,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/page",
       "operation_id": "video_comments_page",
       "summary": "Video comments page",
-      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call)",
       "parameters": [
         {
           "name": "video_id",
@@ -467,7 +467,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies",
       "operation_id": "video_comment_replies",
       "summary": "Comment replies",
-      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call)",
       "parameters": [
         {
           "name": "count",
@@ -505,7 +505,7 @@
       "path": "/v1/youtube/video/{video_id}/comments/{comment_id}/replies/page",
       "operation_id": "video_comment_replies_page",
       "summary": "Comment replies page",
-      "credit_cost": "0 credits when empty; otherwise 1 credit per 5 comments (100 comment minimum, ≥ 20 credits per call)",
+      "credit_cost": "0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call)",
       "parameters": [
         {
           "name": "video_id",

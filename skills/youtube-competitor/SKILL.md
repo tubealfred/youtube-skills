@@ -51,7 +51,7 @@ Sample related videos from one comparable video per channel when the question is
 
 Use the corresponding `*_page` POST tool with path identifier and JSON `continuation_token` only when the user approved deeper, matched samples. Use `youtube_search_suggest` or `youtube_trending` when current query/trend evidence is relevant.
 
-Immediately before **each** comment/reply call, state its 20-credit minimum and ask for explicit confirmation. Default to metadata-only comparison and one equally sized page per selected tab/channel.
+Immediately before **each** comment/reply call, state its 5-credit minimum and ask for explicit confirmation. Default to metadata-only comparison and one equally sized page per selected tab/channel.
 
 ## Evidence rules
 

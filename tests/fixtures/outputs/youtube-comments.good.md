@@ -3,7 +3,7 @@ Source: dQw4w9WgXcQ — https://www.youtube.com/watch?v=dQw4w9WgXcQ
 Retrieved: 2026-07-15T09:34:00Z
 
 Before fetching, I stated the cost: `youtube_comments_list(video_id, count=100, sort=top)`
-bills at least 20 credits, and you approved that single call.
+bills at least 5 credits, and you approved that single call.
 
 Pages fetched: 1; records: 3 top-level + 0 replies
 Date range: 2026-05-06–2026-05-09

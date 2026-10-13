@@ -44,7 +44,7 @@ Omit optional parameters when unused.
 - A thumbnail URL proves only that an image URL was returned. Mark visual composition, text legibility, faces, and title-thumbnail alignment **[Unavailable]** unless an image-capable tool actually inspected the image.
 - Do not call one snapshot “velocity,” a trend, or channel cadence. A cumulative `views / days since publish` calculation is only a lifetime daily average, not current velocity.
 - Related videos are an endpoint-returned sample, not proof of competitive rank or the entire recommendation graph.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 

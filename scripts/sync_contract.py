@@ -150,7 +150,7 @@ def render_catalog(contract: dict[str, Any]) -> str:
             "",
             "## Spend and recovery rules",
             "",
-            "- Empty transcript and comment results are not charged. Non-empty comment and reply calls have a 100-comment minimum and cost at least 20 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.",
+            "- Empty transcript and comment results are not charged. Non-empty comment and reply calls have a 100-comment minimum and cost at least 5 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.",
             "- Batch calls charge only successfully resolved items. Preserve per-item errors and report credit-limited items from partial results instead of retrying them automatically.",
             "- A continuation page is a separate billed call. Stop at the user-approved page limit.",
             "- On `402`, do not make another paid call. Report required and available credits from the response and use only already-fetched data.",

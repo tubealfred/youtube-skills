@@ -27,7 +27,7 @@ Ask for the user's product/service, target use case, disqualifiers, and desired 
 
 1. Confirm the ICP, the video or videos in scope, and what the user will do with the result. Decline bulk-outreach framing here rather than after spending credits.
 2. Resolve the URL and fetch video context first; neither call spends comment credits.
-3. State the 20-credit minimum, get explicit confirmation, and fetch one comments page. Record sort, N, and continuation state.
+3. State the 5-credit minimum, get explicit confirmation, and fetch one comments page. Record sort, N, and continuation state.
 4. Assess every returned comment against the components below. Do not skip low-signal records; a sample with few opportunities is a finding.
 5. Fetch a reply thread only when it can confirm or reverse a promising signal, confirming that call's cost separately.
 6. Report the strongest supported signals, and say plainly when the sample contains none.
@@ -45,7 +45,7 @@ Ask for the user's product/service, target use case, disqualifiers, and desired 
 
 `sort` accepts `top` or `newest`.
 
-Immediately before **each** comments/replies call, state the 20-credit minimum and ask for explicit confirmation. Default to one comment page and no reply calls. Fetch a thread only when it can confirm or reverse a promising signal.
+Immediately before **each** comments/replies call, state the 5-credit minimum and ask for explicit confirmation. Default to one comment page and no reply calls. Fetch a thread only when it can confirm or reverse a promising signal.
 
 ## Reproducible assessment
 

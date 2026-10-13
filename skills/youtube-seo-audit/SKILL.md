@@ -44,7 +44,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 `sort` accepts `top` or `newest`; transcript `kind` accepts `manual`, `auto`, or `any`.
 
-Use enhanced metadata only when chapters matter. For sidebar/suggested placement, prefer the dedicated related endpoint over the related records embedded in enhanced metadata: it paginates and returns the fuller sample. Comments are optional. Immediately before each comment/page/reply call, state the 20-credit minimum and ask for explicit confirmation; metadata and transcript form the default low-cost audit.
+Use enhanced metadata only when chapters matter. For sidebar/suggested placement, prefer the dedicated related endpoint over the related records embedded in enhanced metadata: it paginates and returns the fuller sample. Comments are optional. Immediately before each comment/page/reply call, state the 5-credit minimum and ask for explicit confirmation; metadata and transcript form the default low-cost audit.
 
 ## Evidence rules
 

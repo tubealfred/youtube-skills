@@ -45,7 +45,7 @@ URL-encode query values and omit `continuation_token` on the first request. Send
 - “Top” means highest returned metric within this fetched sample. Do not call the sample globally popular, trending, exhaustive, or representative of search volume.
 - A title/description theme does not establish the video's spoken content. Do not claim hooks, quality, sentiment, or creator strategy without the corresponding evidence source.
 - Never visually assess thumbnail URLs without image inspection.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 

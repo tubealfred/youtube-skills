@@ -40,7 +40,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 `sort` accepts `top` or `newest`.
 
-Immediately before **every** comment or reply call, state that the call costs at least 20 credits and ask for explicit confirmation. Default to one top-level page. Analyze replies only when the user asks for thread comparison or context changes interpretation.
+Immediately before **every** comment or reply call, state that the call costs at least 5 credits and ask for explicit confirmation. Default to one top-level page. Analyze replies only when the user asks for thread comparison or context changes interpretation.
 
 ## Evidence rules
 

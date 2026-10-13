@@ -52,7 +52,7 @@ COMMENT_CALL_MARKERS = (
     "youtube_replies_page",
     "/comments",
 )
-SPEND_GATE_RE = re.compile(r"(at least 20 credits|max\(20|20-credit minimum)", re.I)
+SPEND_GATE_RE = re.compile(r"(at least 5 credits|max\(5|5-credit minimum)", re.I)
 
 QUOTE_RE = re.compile(r"[\"“]([^\"”]{12,})[\"”]")
 
@@ -205,7 +205,7 @@ def check(output: str, responses: list[dict[str, Any]]) -> list[Violation]:
                 violations.append(
                     Violation("missing-spend-gate", number, line,
                               "a comment or reply call must be preceded by its "
-                              "stated 20-credit minimum")
+                              "stated 5-credit minimum")
                 )
 
         if THUMBNAIL_CLAIM_RE.search(line) and "[Unavailable]" not in line:

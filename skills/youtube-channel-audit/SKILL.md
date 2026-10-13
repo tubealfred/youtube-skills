@@ -43,7 +43,7 @@ Success and failure use different shapes. A success is `{"status":"success","dat
 
 `sort` accepts `top` or `newest`.
 
-For an **external market opportunity** section, add bounded evidence with `youtube_search_suggest` (`GET /v1/youtube/search/suggestions?q=...`), `youtube_search_query` (`GET /v1/youtube/search?query=...` with current filters), or `youtube_trending` (`GET /v1/youtube/trending`). For **audience-request evidence**, use `youtube_comments_list` (`GET /v1/youtube/video/{video_id}/comments`, optional `count`, `sort`) only after explicit confirmation of its 20-credit minimum. Confirm separately before every additional comment/reply page.
+For an **external market opportunity** section, add bounded evidence with `youtube_search_suggest` (`GET /v1/youtube/search/suggestions?q=...`), `youtube_search_query` (`GET /v1/youtube/search?query=...` with current filters), or `youtube_trending` (`GET /v1/youtube/trending`). For **audience-request evidence**, use `youtube_comments_list` (`GET /v1/youtube/video/{video_id}/comments`, optional `count`, `sort`) only after explicit confirmation of its 5-credit minimum. Confirm separately before every additional comment/reply page.
 
 ## Evidence rules
 

@@ -46,7 +46,7 @@ Omit optional parameters when unused. Send page JSON with `Content-Type: applica
 - The contract exposes `published_time_text`, not a guaranteed absolute timestamp. Preserve it verbatim; do not manufacture an exact date or posting cadence.
 - Rank engagement only within the fetched sample using returned `like_count` and `comment_count`. Counts do not reveal comment text or sentiment.
 - Preserve returned attachment data without claiming attachment type/content that was not supplied. Do not label a post as a poll or report poll options/results unless those fields are actually present.
-- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 20 credits.
+- Never call comment or reply endpoints from this skill. If another workflow proposes one, require explicit confirmation immediately before every such call because each costs at least 5 credits.
 
 ## Output contract
 
