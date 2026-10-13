@@ -138,7 +138,7 @@ Subscription credits are issued monthly and expire at the end of the billing per
 |---|---|---|
 | Available transcript, video, channel, playlist, search, or page call | 1 credit | 5,000 lookups |
 | Batch video/channel lookup | 1 credit per resolved ID (max 50/call) | 5,000 resolved IDs |
-| Non-empty comments and replies | 1 credit per 5 comments, 25-comment minimum → **≥ 5 credits per call** | Up to 25,000 comments |
+| Non-empty comments and replies | 1 credit per 20 comments, 100-comment minimum → **≥ 5 credits per call** | Up to 100,000 comments |
 
 Comment work is the only operation that can move a balance quickly — one page is at least 5 credits, and every continuation page and reply thread is another billed call. That is why the skills stop and ask before each one.
 
@@ -150,7 +150,7 @@ Comment work is the only operation that can move a balance quickly — one page 
 
 Most metadata, search, channel, and playlist calls—including their non-comment continuation pages—cost 1 credit per call. Available transcripts cost 1 credit; unavailable captions are free. Batch calls accept up to 50 IDs and cost 1 credit per successfully resolved ID.
 
-Empty comment and reply results are free. Non-empty calls cost **1 credit per 5 comments with a 25-comment minimum: at least 5 credits per call**. Each continuation page and each selected reply thread is another billed call. Immediately before every comment/reply call, a skill must state that call's minimum cost, scope, and stop condition, then obtain explicit approval; approval for one page or thread does not approve the next.
+Empty comment and reply results are free. Non-empty calls cost **1 credit per 20 comments with a 100-comment minimum: at least 5 credits per call**. Each continuation page and each selected reply thread is another billed call. Immediately before every comment/reply call, a skill must state that call's minimum cost, scope, and stop condition, then obtain explicit approval; approval for one page or thread does not approve the next.
 
 Recovery rules are deliberately conservative:
 
@@ -205,7 +205,7 @@ No. TubeAlfred is a hosted REST API and MCP server; there is no Google Cloud pro
 
 ### Why do comment requests ask for confirmation every time?
 
-Non-empty comment and reply calls bill at least 5 credits each because of a 25-comment minimum; empty results are free. One approval covers one call — the next page and each reply thread are separately billed, so each is separately confirmed. This is deliberate: a silent "let me fetch a few more pages" is how a research task turns into a few hundred credits.
+Non-empty comment and reply calls bill at least 5 credits each because of a 100-comment minimum; empty results are free. One approval covers one call — the next page and each reply thread are separately billed, so each is separately confirmed. This is deliberate: a silent "let me fetch a few more pages" is how a research task turns into a few hundred credits.
 
 ### Why does the output say `[Unavailable]` instead of answering?
 

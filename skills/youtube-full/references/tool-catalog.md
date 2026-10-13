@@ -19,15 +19,15 @@ The contract contains **34 read-only tools**. Each listed call is credit-metered
 | `youtube_channel_videos` | `GET /v1/youtube/channel/{channel_id}/videos` | 1 credit per call | `channel_id` (path) | `continuation_token` (query) |
 | `youtube_channel_videos_page` | `POST /v1/youtube/channel/{channel_id}/videos/page` | 1 credit per call | `channel_id` (path); `continuation_token` (body) | — |
 | `youtube_channels_batch` | `POST /v1/youtube/channels:batch` | 1 credit per successfully resolved ID (up to 50 IDs per call) | `ids` (body) | `fields` (query) |
-| `youtube_comments_list` | `GET /v1/youtube/video/{video_id}/comments` | 0 credits when empty; otherwise 1 credit per 5 comments (25 comment minimum, ≥ 5 credits per call) | `video_id` (path) | `count` (query); `sort` (query): `top`, `newest` |
-| `youtube_comments_page` | `POST /v1/youtube/video/{video_id}/comments/page` | 0 credits when empty; otherwise 1 credit per 5 comments (25 comment minimum, ≥ 5 credits per call) | `video_id` (path); `continuation_token` (body) | `count` (body) |
+| `youtube_comments_list` | `GET /v1/youtube/video/{video_id}/comments` | 0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call) | `video_id` (path) | `count` (query); `sort` (query): `top`, `newest` |
+| `youtube_comments_page` | `POST /v1/youtube/video/{video_id}/comments/page` | 0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call) | `video_id` (path); `continuation_token` (body) | `count` (body) |
 | `youtube_playlist_get` | `GET /v1/youtube/playlist/{playlist_id}` | 1 credit per call | `playlist_id` (path) | `continuation_token` (query) |
 | `youtube_playlist_metadata` | `GET /v1/youtube/playlist/{playlist_id}/metadata` | 1 credit per call | `playlist_id` (path) | — |
 | `youtube_playlist_page` | `POST /v1/youtube/playlist/{playlist_id}/page` | 1 credit per call | `playlist_id` (path); `continuation_token` (body) | — |
 | `youtube_related_videos` | `GET /v1/youtube/video/{video_id}/related` | 1 credit per call | `video_id` (path) | `continuation_token` (query) |
 | `youtube_related_videos_page` | `POST /v1/youtube/video/{video_id}/related/page` | 1 credit per call | `video_id` (path); `continuation_token` (body) | — |
-| `youtube_replies_list` | `GET /v1/youtube/video/{video_id}/comments/{comment_id}/replies` | 0 credits when empty; otherwise 1 credit per 5 comments (25 comment minimum, ≥ 5 credits per call) | `video_id` (path); `comment_id` (path) | `count` (query); `sort` (query): `top`, `newest` |
-| `youtube_replies_page` | `POST /v1/youtube/video/{video_id}/comments/{comment_id}/replies/page` | 0 credits when empty; otherwise 1 credit per 5 comments (25 comment minimum, ≥ 5 credits per call) | `video_id` (path); `comment_id` (path); `continuation_token` (body) | `count` (body) |
+| `youtube_replies_list` | `GET /v1/youtube/video/{video_id}/comments/{comment_id}/replies` | 0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call) | `video_id` (path); `comment_id` (path) | `count` (query); `sort` (query): `top`, `newest` |
+| `youtube_replies_page` | `POST /v1/youtube/video/{video_id}/comments/{comment_id}/replies/page` | 0 credits when empty; otherwise 1 credit per 20 comments (100 comment minimum, ≥ 5 credits per call) | `video_id` (path); `comment_id` (path); `continuation_token` (body) | `count` (body) |
 | `youtube_search_hashtag` | `GET /v1/youtube/search/hashtag` | 1 credit per call | `hashtag` (query) | `continuation_token` (query) |
 | `youtube_search_hashtag_page` | `POST /v1/youtube/search/hashtag/page` | 1 credit per call | `hashtag` (body); `continuation_token` (body) | — |
 | `youtube_search_page` | `POST /v1/youtube/search/page` | 1 credit per call | `query` (body); `continuation_token` (body) | `channel_id` (body); `upload_date` (body): `all`, `today`, `week`, `month`, `year`; `duration` (body): `all`, `under_three_mins`, `three_to_twenty_mins`, `over_twenty_mins`; `sort` (body): `relevance`, `popularity`; `type` (body): `all`, `video`, `shorts`, `channel`, `playlist`, `movie`; `features` (body); `live` (body); `shorts` (body) |
@@ -43,7 +43,7 @@ The contract contains **34 read-only tools**. Each listed call is credit-metered
 
 ## Spend and recovery rules
 
-- Empty transcript and comment results are not charged. Non-empty comment and reply calls have a 25-comment minimum and cost at least 5 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.
+- Empty transcript and comment results are not charged. Non-empty comment and reply calls have a 100-comment minimum and cost at least 5 credits per call. Obtain explicit user approval for the estimated call count and minimum spend before the first such call and before adding pages or reply threads.
 - Batch calls charge only successfully resolved items. Preserve per-item errors and report credit-limited items from partial results instead of retrying them automatically.
 - A continuation page is a separate billed call. Stop at the user-approved page limit.
 - On `402`, do not make another paid call. Report required and available credits from the response and use only already-fetched data.

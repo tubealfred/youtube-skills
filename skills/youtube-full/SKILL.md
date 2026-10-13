@@ -33,7 +33,7 @@ Read [references/tool-catalog.md](references/tool-catalog.md) before selecting e
 
 ## Spend controls
 
-Most calls cost 1 credit. Unavailable transcripts and empty comment results are free. Batch calls cost 1 credit per successfully resolved ID. Every non-empty comment or reply call costs at least 5 credits because of the 25-comment minimum.
+Most calls cost 1 credit. Unavailable transcripts and empty comment results are free. Batch calls cost 1 credit per successfully resolved ID. Every non-empty comment or reply call costs at least 5 credits because of the 100-comment minimum.
 
 - Immediately before **each** comments/replies first-page or page call, state that call's minimum cost and ask for explicit confirmation. A previous page approval does not approve another page.
 - Default to one page per list. Fetch another page only when it changes the requested decision and the user approved the added cost.
