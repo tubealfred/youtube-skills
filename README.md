@@ -6,7 +6,7 @@ Fifteen focused Agent Skills turn TubeAlfred's read-only YouTube data into artif
 
 **Read-only · 34-tool pinned contract · every claim labeled and sourced**
 
-**Free tier · No credit card · 50 credits on signup, valid for 14 days**
+**Free tier · No credit card · 50 credits reset every month on your signup anniversary**
 
 [TubeAlfred.com](https://tubealfred.com) · [Pricing](https://tubealfred.com/pricing) · [MCP server](https://mcp.tubealfred.com/) · [Tool catalog](skills/youtube-full/references/tool-catalog.md) · [Machine-readable contract](references/tubealfred-tools.json)
 
@@ -126,11 +126,11 @@ Choose a monthly plan with one credit wallet shared across MCP/API calls, transc
 
 | Plan | Price | Credits | Notes |
 |---|---|---|---|
-| **Signup** | free | 50 credits | Valid for 14 days; no card required |
+| **Free** | free | Resets to 50 credits monthly | Signup anniversary; no rollover; no card required |
 | **Creator Plus** | **$15/month** | 5,000 credits/month | Shared across MCP and API workflows |
 | **Creator Pro** | **$29/month** | 12,000 credits/month | More credits for frequent research and automation |
 
-Subscription credits are issued monthly and expire at the end of the billing period. Existing subscribers keep their agreed subscription price and credit allowance, including both earlier $5 cohorts. New top-up purchases use the current top-up rates for everyone. See the [canonical pricing document](https://tubealfred.com/pricing.md) for current offers.
+The free allowance resets to 50 on each monthly signup anniversary, with no rollover. Resets affect only the free allowance. Subscription credits are issued monthly and expire at the end of the billing period. Existing subscribers keep their agreed subscription price and credit allowance, including both earlier $5 cohorts. New top-up purchases use the current top-up rates for everyone. See the [canonical pricing document](https://tubealfred.com/pricing.md) for current offers.
 
 **What credits buy**
 
@@ -217,7 +217,7 @@ No. Every documented TubeAlfred operation is read-only. The skills are instructe
 
 ### What does this cost?
 
-New accounts receive 50 free credits that expire after 14 days. Choose Creator Plus or Creator Pro; see the [plan table](#pricing) above. Existing subscribers keep their agreed subscription price and credit allowance. Most calls use 1 credit; non-empty comment calls use at least 5 credits. The [canonical pricing document](https://tubealfred.com/pricing.md) has current offers and billing details.
+Free accounts start with 50 credits and reset to 50 each month on their signup anniversary. Unused free credits do not roll over; resets affect only the free allowance. Choose Creator Plus or Creator Pro; see the [plan table](#pricing) above. Existing subscribers keep their agreed subscription price and credit allowance. Most calls use 1 credit; non-empty comment calls use at least 5 credits. The [canonical pricing document](https://tubealfred.com/pricing.md) has current offers and billing details.
 
 ### Can I use REST instead of MCP?
 

@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "tubealfred-youtube",
   "displayName": "TubeAlfred YouTube",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "YouTube transcripts, comments, channels, playlists, and evidence-backed audits. Fifteen skills over TubeAlfred's read-only YouTube API, each labelling what it observed, calculated, inferred, or could not fetch.",
   "author": {
     "name": "TubeAlfred",
